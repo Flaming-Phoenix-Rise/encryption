@@ -5,7 +5,6 @@ import os
 import tempfile
 from pymongo import MongoClient
 
-myclient = MongoClient("mongodb://localhost:27017/")
 BUFFER_SIZE = 64 * 1024
 
 def encrypt_file(uploaded_file, name, mycol):
@@ -73,9 +72,10 @@ def decrypt_file(uploaded_file, name, mycol, file_extension):
 
 def main():
     st.title("Encryption Tool")
-    mydb = myclient["Cluster22207"]
-    mycol = mydb["keys"]
-
+    mongodb+srv://andyduoduo8@gmail.com:u5GP4TV#yutiAnD@cluster22207.vyuec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster22207
+    client = MongoClient(MONGO_URI)
+    db = client.FaceRecognitionApp
+    users_collection = db.Users
     name = st.text_input("Enter Your Name:")
     if not name:
         st.warning("Please enter your name to proceed.")
