@@ -5,7 +5,12 @@ import os
 import tempfile
 from pymongo import MongoClient
 
-MONGO_URI = "mongodb+srv://andyduoduo8@gmail.com:u5GP4TV#yutiAnD@cluster22207.vyuec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster22207"
+username="andyduoduo8@gmail.com"
+password="u5GP4TV#yutiAnD"
+escaped_username = quote_plus(username)
+escaped_password = quote_plus(password)
+
+MONGO_URI = "mongodb+srv://{escaped_username}:{escaped_password}@cluster22207.vyuec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster22207"
 client = MongoClient(MONGO_URI)
 db = client.Encryption
 mycol = db.Keys
