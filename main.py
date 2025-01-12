@@ -9,7 +9,6 @@ from pymongo.server_api import ServerApi
 MONGO_URI = "mongodb+srv://Phoenix:Gv68TLSM23qwENrB@project.oihvt.mongodb.net/?retryWrites=true&w=majority&appName=Project"
 client = MongoClient(MONGO_URI, server_api=ServerApi('1'))
 db = client["Encryption"]
-print(db.list_collection_names())
 mycol = db["Keys"]
 BUFFER_SIZE = 64 * 1024
 
