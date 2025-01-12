@@ -1,3 +1,4 @@
 pyAesCrypt
+secrets
 streamlit
 pymongo
