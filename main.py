@@ -5,7 +5,7 @@ import os
 import tempfile
 from pymongo import MongoClient
 
-MONGO_URI = "mongodb+srv://andyduoduo8@gmail.com:u5GP4TV#yutiAnD@cluster22207.vyuec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster22207"
+MONGO_URI = "mongodb+srv://{"andyduoduo8@gmail.com"}:{"u5GP4TV#yutiAnD"}@cluster22207.vyuec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster22207"
 client = MongoClient(MONGO_URI)
 db = client.Encryption
 mycol = db.Keys
