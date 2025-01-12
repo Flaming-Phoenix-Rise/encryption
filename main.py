@@ -4,15 +4,10 @@ import streamlit as st
 import os
 import tempfile
 from pymongo import MongoClient
-from urllib.parse import quote_plus
+from pymongo.server_api import ServerApi
 
-username="andyduoduo8@gmail.com"
-password="u5GP4TV#yutiAnD"
-escaped_username = quote_plus(username)
-escaped_password = quote_plus(password)
-
-MONGO_URI = "mongodb+srv://{escaped_username}:{escaped_password}@cluster22207.vyuec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster22207"
-client = MongoClient(MONGO_URI)
+MONGO_URI = "mongodb+srv://Phoenix:Gv68TLSM23qwENrB@project.oihvt.mongodb.net/?retryWrites=true&w=majority&appName=Project"
+client = MongoClient(MONGO_URI, server_api=ServerApi('1'))
 db = client.Encryption
 mycol = db.Keys
 BUFFER_SIZE = 64 * 1024
