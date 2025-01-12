@@ -6,9 +6,9 @@ import tempfile
 from pymongo import MongoClient
 
 MONGO_URI = "mongodb+srv://andyduoduo8@gmail.com:u5GP4TV#yutiAnD@cluster22207.vyuec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster22207"
-    client = MongoClient(MONGO_URI)
-    db = client.Encryption
-    mycol = db.Keys
+client = MongoClient(MONGO_URI)
+db = client.Encryption
+mycol = db.Keys
 BUFFER_SIZE = 64 * 1024
 
 def encrypt_file(uploaded_file, name, mycol):
